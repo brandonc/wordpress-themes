@@ -1,0 +1,47 @@
+/*
+Theme Name: Bunny Adventure
+Description: Levi's theme, designed by Papa, inspired by Old School Stationers
+Version: 0.1
+Author: Brandon Croft
+*/
+
+/* YUI Reset 3.0 */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+* { margin:0; padding:0; }   
+html, body, #page { height: 100%; }  
+body > #page {height: auto; min-height: 100%;}  
+#content { padding-bottom: 80px; }  /* must be same height as the footer */  
+  
+#footer { position: relative; margin-top: -80px; height: 80px; clear:both; }
+  
+/* CLEAR FIX*/  
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+/* Hides from IE-mac */  
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+#page { width: 100%; background: #72f2e5 url(images/bg-ocean.png) repeat-x scroll top left; }
+#content { width: 980px; margin: 0 auto; font-family: Helvetica, Arial, sans-serif; font-size: 14px; }
+#header { height: 255px; }
+#logo { }
+.rss { display: block; position: absolute; top: 125px; left: 732px; height: 29px; width: 56px; background: transparent url(images/btn-rss.png) no-repeat scroll 0 0; cursor: pointer; }
+.rss:hover { background-position: 0 -30px; }
+
+#search { position: relative; top: 12px; width: 171px; height: 37px; float: right; background: transparent url(images/search.png) no-repeat scroll 0 0; }
+#search label { display: none; }
+#searchsubmit { display: none; }
+#search #s { color: #626c6b; background-color: transparent; outline: none; border: none; text-transform: uppercase; font-family: Helvetica, Arial, sans-serif; font-size: 14px; position: relative; top: 11px; left: 15px; width: 120px; }
+	#s:focus { color: #262626; }
+
+.post { padding: 10px; width: 760px; -moz-border-radius: 8px; -webkit-border-radius: 8px; background: #D5F2EF; -webkit-box-shadow: 1px 1px 0px #73603D; -moz-box-shadow: 1px 1px 0px #73603D; }
+.post .title { margin-bottom: 10px; }
+.post h1 { float: left; margin-bottom: 20px; }
+.post .entry { clear: both; font-size: 14px; line-height: 18px; }
+.entry p { margin: 10px 0 10px 0; }
+.date { float: right; padding: 3px 10px 3px 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; background: #F2972C; -moz-box-shadow: 1px 1px 0px #73603D; -webkit-box-shadow: 1px 1px 0px #73603D; font-size: 12pt; color: #FFFFFF; -moz-text-shadow: 1px 1px 0px #73603D; text-shadow: 1px 1px 0px #73603D; }
+
+h1 { font-size: 26px; text-transform: uppercase; line-height: 26px; }
+h1 a { color: #73603D; text-decoration: none; }
