@@ -15,7 +15,7 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="page">
-	<div id="content" class="clearfix">
+	<div id="wrap" class="content clearfix">
 		<div id="header">
 			<a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Levi Awesome"/></a>
 			
