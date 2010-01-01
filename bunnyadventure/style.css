@@ -8,10 +8,9 @@ Author: Brandon Croft
 /* YUI Reset 3.0 */
 html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
 
-* { margin:0; padding:0; }   
 html, body, #page { height: 100%; }  
 body > #page {height: auto; min-height: 100%;}  
-#wrap { padding-bottom: 140px; }  /* must be same height as the footer */  
+#wrap { padding-bottom: 90px; }  /* must be same height as the footer */  
   
 #footer { position: relative; margin-top: -80px; height: 80px; clear:both; }
 
@@ -26,8 +25,12 @@ body > #page {height: auto; min-height: 100%;}
 a { color: #626c6b; text-decoration: none; }
 a:hover { color: #b8b8b8; }
 
-.left { float: left; }
+.hr { border-bottom: dotted 1px #b8b8b8; height: 1px; margin: 8px 0 10px 0; }
+.quiet { font-style: italic; color: #626c6b; line-height: 18px; font-size: 14px; }
+
+.left, .alignleft { float: left; }
 .right { float: right; }
+.clear { clear: both; }
 
 #page { width: 100%; background: #72f2e5 url(images/bg-ocean.png) repeat-x scroll top left; }
 .content { width: 980px; margin: 0 auto; font-family: Helvetica, Arial, sans-serif; font-size: 14px; }
@@ -39,13 +42,12 @@ a:hover { color: #b8b8b8; }
 #search { position: relative; top: 12px; width: 171px; height: 37px; float: right; background: transparent url(images/search.png) no-repeat scroll 0 0; }
 #search label { display: none; }
 #searchsubmit { display: none; }
-#search #s { color: #626c6b; background-color: transparent; outline: none; border: none; text-transform: uppercase; font-family: Helvetica, Arial, sans-serif; font-size: 14px; position: relative; top: 11px; left: 15px; width: 120px; }
+#search #s { color: #626c6b; background-color: transparent; outline: none; border: none; text-transform: uppercase; font-family: Helvetica, Arial, sans-serif; font-size: 14px; position: relative; top: 12px; left: 15px; width: 120px; }
 	#s:focus { color: #262626; }
 
 .post { color: #262626; padding: 10px 0 10px 0; margin: 0 10px 10px 0; width: 760px; -moz-border-radius: 8px; -webkit-border-radius: 8px; background: #D5F2EF; -webkit-box-shadow: 1px 1px 0px #73603D; -moz-box-shadow: 1px 1px 0px #73603D; }
 .post .title { margin: 0 10px 10px 10px; }
 .content h1 { float: left; margin-bottom: 10px; color: #73603D; }
-.sidebar h1 { font-size: 54px; }
 .post .entry { clear: both; font-size: 14px; line-height: 18px; }
 .post .article { padding: 10px; }
 .entry .caption { margin: 10px 10px 10px 10px; }
@@ -54,11 +56,13 @@ a:hover { color: #b8b8b8; }
 .date a { color: #FFFFFF; text-decoration: underline; -moz-text-shadow: 1px 1px 0px #73603D; text-shadow: 1px 1px 0px #73603D; }
 .date a:hover { color: #FFFFFF; }
 
-.sidebar { float: right; width: 190px; padding: 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; background: #D5F2EF; -webkit-box-shadow: 1px 1px 0px #73603D; -moz-box-shadow: 1px 1px 0px #73603D; }
+.sidebar {  font-size: 14px; line-height: 18px; float: right; width: 190px; padding: 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; background: #D5F2EF; -webkit-box-shadow: 1px 1px 0px #73603D; -moz-box-shadow: 1px 1px 0px #73603D; }
+.sidebar img { border: 3px solid #b8b8b8; margin: 0 10px 0 0; }
+.sidebar .flickrphotos img { margin: 4px 10px 0 0; }
 
 h1 { font-size: 26px; text-transform: uppercase; line-height: 26px; }
 h1 a { color: #73603D; text-decoration: none; }
 
 #footer { background: transparent url(images/bg-ocean-footer.png) repeat-x scroll 0 0; }
-#footer .content { padding-top: 35px; font-size: 12px; color: #D5F2EF; -moz-text-shadow: 1px 1px 0px #262626; text-shadow: 1px 1px 0px #262626; }
+#footer .content { padding-top: 30px; font-size: 12px; line-height: 18px; color: #D5F2EF; -moz-text-shadow: 1px 1px 0px #262626; text-shadow: 1px 1px 0px #262626; }
 #footer .content a { color: #F2972C; }

@@ -43,12 +43,20 @@
 				</div>
 			
 		<?php else: ?>
-			<h1>Not Found</h1>
-			<p>Sorry, there are no posts yet.</p>
+			<div class="post">
+				<div class="title">
+					<h1>Not Found</h1>
+				</div>
+				
+				<div class="entry article">
+					<p>Sorry, no posts match your query.</p>
+				</div>
+			</div>
 		<?php endif; ?>
 		</div>
 		<div class="right sidebar">
-			<h1>I RUN IT</h1>
+			<?php get_sidebar(); ?>
 		</div>
 	</div>
+</div>
 <?php get_footer(); ?>
