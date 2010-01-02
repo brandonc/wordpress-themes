@@ -29,13 +29,15 @@ a:hover { color: #b8b8b8; }
 .quiet { font-style: italic; color: #626c6b; line-height: 18px; font-size: 14px; }
 
 .left, .alignleft { float: left; }
-.right { float: right; }
+.right, .alignright { float: right; }
 .clear { clear: both; }
+
+.alignleft { margin-right: 10px; }
 
 #page { width: 100%; background: #72f2e5 url(images/bg-ocean.png) repeat-x scroll top left; }
 .content { width: 980px; margin: 0 auto; font-family: Helvetica, Arial, sans-serif; font-size: 14px; }
 #header { height: 255px; }
-#logo { }
+#logo { margin-top: 3px; }
 .rss { display: block; position: absolute; top: 125px; left: 732px; height: 29px; width: 56px; background: transparent url(images/btn-rss.png) no-repeat scroll 0 0; cursor: pointer; }
 .rss:hover { background-position: 0 -30px; }
 
@@ -50,8 +52,10 @@ a:hover { color: #b8b8b8; }
 .content h1 { float: left; margin-bottom: 10px; color: #73603D; }
 .post .entry { clear: both; font-size: 14px; line-height: 18px; }
 .post .article { padding: 10px; }
+.post p { margin: 10px 0; }
 .entry .caption { margin: 10px 10px 10px 10px; }
 .post .meta { margin: 0 10px 0 10px; }
+.post .bordered { border: solid 3px #b8b8b8; }
 .date { float: right; padding: 3px 10px 3px 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; background: #F2972C; -moz-box-shadow: 1px 1px 0px #73603D; -webkit-box-shadow: 1px 1px 0px #73603D; font-size: 12pt; color: #FFFFFF; -moz-text-shadow: 1px 1px 0px #73603D; text-shadow: 1px 1px 0px #73603D; }
 .date a { color: #FFFFFF; text-decoration: underline; -moz-text-shadow: 1px 1px 0px #73603D; text-shadow: 1px 1px 0px #73603D; }
 .date a:hover { color: #FFFFFF; }
@@ -62,6 +66,10 @@ a:hover { color: #b8b8b8; }
 
 h1 { font-size: 26px; text-transform: uppercase; line-height: 26px; }
 h1 a { color: #73603D; text-decoration: none; }
+
+.navigation { margin-top: 30px; }
+.navigation .alignright { margin-right: 10px; }
+.navigation a { color: #F2972C; font-size: 20px; line-height: 26px; -moz-text-shadow: 1px 1px 0px #73603D; text-shadow: 1px 1px 0px #73603D;}
 
 #footer { background: transparent url(images/bg-ocean-footer.png) repeat-x scroll 0 0; }
 #footer .content { padding-top: 30px; font-size: 12px; line-height: 18px; color: #D5F2EF; -moz-text-shadow: 1px 1px 0px #262626; text-shadow: 1px 1px 0px #262626; }

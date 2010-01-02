@@ -1,8 +1,8 @@
 <div id="footer">  
 	<div class="content">
 		<div class="left">
-			<p>Copyright &copy;2009 Levi Awesome<br/>
-			Myself and this website were produced by <a href="mailto:meredith.yvonne@gmail.com">Mama</a> and <a href="mailto:brandon.croft@gmail.com">Papa</a></p>
+			<p>Copyright &copy;<?php echo date('Y'); ?> Levi Awesome<br/>
+			Myself and this website were produced by <a href="mailto:meredith.yvonne@gmail.com">Momma</a> and <a href="mailto:brandon.croft@gmail.com">Papa</a></p>
 		</div>
 		<div class="right">
 			<p>Published using <a href="http://www.wordpress.org">Wordpress</a>.</p>
