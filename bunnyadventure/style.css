@@ -37,7 +37,7 @@ a:hover { color: #b8b8b8; }
 #page { width: 100%; background: #72f2e5 url(images/bg-ocean.png) repeat-x scroll top left; }
 .content { width: 980px; margin: 0 auto; font-family: Helvetica, Arial, sans-serif; font-size: 14px; }
 #header { height: 255px; }
-#logo { margin-top: 3px; }
+#logo { padding-top: 3px; float: left; }
 .rss { display: block; position: absolute; top: 125px; left: 732px; height: 29px; width: 56px; background: transparent url(images/btn-rss.png) no-repeat scroll 0 0; cursor: pointer; }
 .rss:hover { background-position: 0 -30px; }
 

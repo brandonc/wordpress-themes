@@ -1,0 +1,195 @@
+/*
+Theme Name: grantellis.org (White)
+Description: Grant's white theme
+Version: 1.0
+Author: Brandon Croft
+Author URI: http://twitter.com/brandoncroft
+*/
+
+/* reset.css (from blueprint css) */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body{line-height:1;color:#666;background:white;}
+table{border-collapse:separate;border-spacing:0;}
+caption,th,td{text-align:left;font-weight:normal;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";}
+blockquote,q{quotes:"" "";}
+
+/* typography.css (from blueprint css) */
+body{font-family:Helvetica,"Lucida Grande",Arial,Verdana,sans-serif;line-height:1.5;}
+body{font-size:75%;}
+html > body{font-size:10px;}
+h1,h2,h3,h4,h5,h6{font-family:'HelveticaNeue-CondensedBold', 'Arial Narrow', Helvetica, Arial, sans-serif;color:#000;clear:both;}
+h1{font-size:2.5em;font-weight:bold;}
+h2{font-size:2.5em;line-height:2.2em}
+h3{font-size:2em;}
+h4{font-size:1.6em;font-family:Helvetica,Arial,sans-serif;}
+h5{font-size:1.25em;font-weight:bold;}
+h6{font-size:1.1em;}
+p{margin:0 0 1.5em 0;}
+p.last{margin-bottom:0;}
+p img{float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
+p img.top{margin-top:0;}
+ul,ol{margin:0 0 1.5em 1.5em;}
+ol{list-style-type:decimal;}
+li{margin:0 0 0 3.0em;}
+dl{margin:1.5em 0;}
+dl dt{font-weight:bold;}
+a{color:#125AA7;text-decoration:none;outline:none;}
+blockquote{margin:1.5em 0 1.5em 1.5em;color:#666;font-style:italic;}
+strong{font-weight:bold;}
+em{font-style:italic;}
+pre{margin-bottom:1.3em;border:0.1em solid #ddd;padding:1.5em;}
+code{font:0.9em Monaco,monospace;}
+hr{background:#B2CCFF;color:#B2CCFF;clear:both;float:none;width:100%;height:0.1em;margin:0 0 1.4em 0;border:none;}
+* html hr{margin:0 0 1.2em 0;}
+/*table{margin-bottom:1.4em;border-top:0.1em solid #ddd;border-left:0.1em solid #ddd;}
+th,td{height:1em;padding:0.2em 0.4em;border-bottom:0.1em solid #ddd;border-right:0.1em solid #ddd;}
+th{font-weight:bold;}*/
+label{font-weight:bold;}
+textarea{height:180px;width:300px;}
+p.small{font-size:0.8em;margin-bottom:1.875em;line-height:1.875em;}
+p.large{font-size:1.2em;line-height:2.5em;}
+p.quiet{color:#666;}
+.strikethrough{text-decoration:line-through;}
+.hide{display:none;}
+.alt{font-family:Georgia,"Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",serif;font-style:italic;}
+.norm{font-family:Helvetica,"Lucida Grande",Arial,Verdana,sans-serif;line-height:1.5;font-style:normal;}
+.dquo{margin-left:-.2em;}
+h1 .dquo{margin-left:-.45em;}
+p.incr,.incr p{font-size:0.83333em;line-height:1.44em;margin-bottom:1.8em;}
+
+/* --------------------------------------------
+screen.css
+-------------------------------------------- */
+
+body {
+    background-color: #fff;
+}
+
+p { font-size: 1.2em; }
+.caption p { font-size: 1.0em; }
+a { color: #ccc; }
+a:hover { color: #000; }
+
+.container {
+    width: 932px;
+    text-align: left;
+    clear: both;
+}
+
+.right { text-align: right; float: right; }
+
+.clear {
+    clear: both;
+}
+
+.column {
+    float: left;
+    margin: 0;
+}
+
+.logo {
+    margin: 15px 10px 22px 10px;
+    width: 181px;
+}
+
+.nav {
+    clear: left;
+    margin: 0 10px 0 10px;
+    width: 181px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.nav img {
+    margin: 20px 0 0 3px;
+}
+
+.nav .spacer {
+    width: 50px;
+    border-top: 1px #ffffff solid;
+    margin: 10px 0 10px 0;
+}
+
+.nav ul li {
+    margin: 3px 0 3px 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.nav a {
+    font-size: 1.2em;
+    padding: 3px;
+}
+
+.nav a:hover { color: #000 !important; }
+
+.nav a.current {
+    color: #000000;
+}
+
+.content {
+    width: 611px;
+}
+
+.copyright {
+    color: #ccc;
+    margin: 10px 0 0 3px;
+    font-size: 1.0em;
+}
+
+#id_photo {
+    cursor: pointer;
+}
+
+.photo div {
+    color: #ccc;
+    margin-top: 6px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.photo .number a {
+    color: #ccc;
+}
+
+.photo .number a:hover { 
+    color: #000;
+}
+
+.photo img.arrow {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.photo .caption {
+    float: right;
+}
+
+.photo .number {
+    float: left;
+}
+
+table.pricing {
+    margin-bottom: 40px;
+    font-size: 1.2em;
+}
+
+table.pricing th {
+    font-weight: bold;
+    width: 90px;
+}
+
+div.book-preview {
+    width: 800px;
+    overflow: auto;
+    height: 151px;
+    margin-bottom: 40px;
+    border: solid 1px #ccc;
+}

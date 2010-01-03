@@ -17,7 +17,7 @@
 <div id="page">
 	<div id="wrap" class="content clearfix">
 		<div id="header">
-			<a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Levi Awesome"/></a>
+			<div id="logo"><a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Levi Awesome"/></a></div>
 			
 			<a href="<?php bloginfo('rss2_url'); ?>" class="rss"></a>
 		
