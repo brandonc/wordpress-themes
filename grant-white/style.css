@@ -72,7 +72,6 @@ a { color: #ccc; }
 a:hover { color: #000; }
 
 .container {
-    width: 932px;
     text-align: left;
     clear: both;
 }
@@ -142,7 +141,7 @@ a:hover { color: #000; }
     font-size: 1.0em;
 }
 
-#id_photo {
+.wp-post-image {
     cursor: pointer;
 }
 

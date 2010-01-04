@@ -6,16 +6,18 @@
 <?php
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	global $query_string;
-	$has_next = ($paged < $wp_query->max_num_pages);
-	$has_prev = ($paged > 1);
-	query_posts($query_string.'&posts_per_page=1&paged='.$paged); ?>
-<?php if (have_posts()) : the_post(); ?>
+	query_posts($query_string.'&posts_per_page=1&paged='.$paged);
+
+	if (have_posts()) : the_post();
+		$has_next = ($paged < $wp_query->max_num_pages);
+		$has_prev = ($paged > 1);
+?>
 	<div class="photo">
-		<?php the_post_thumbnail('single-post-thumbnail'); ?>
-        <img id="arrow-previous" class="arrow" src="<?php bloginfo('template_directory') ?>/img/left_arrow.png"/>
-        <img id="arrow-next" class="arrow" src="<?php bloginfo('template_directory') ?>/img/right_arrow.png"/>
-        <br clear="all"/>
-        <div style="margin-top: 0; width: 700px;">
+        <div style="margin-top: 0;">
+			<?php the_post_thumbnail('single-post-thumbnail'); ?>
+	        <img id="arrow-previous" class="arrow" src="<?php bloginfo('template_directory') ?>/img/left_arrow.png"/>
+	        <img id="arrow-next" class="arrow" src="<?php bloginfo('template_directory') ?>/img/right_arrow.png"/>
+	        <br clear="all"/>
 			<div class="number left">
                 Image <?php echo $paged; ?> / <?php echo $wp_query->max_num_pages; ?><br/>
 				<?php previous_posts_link('PREVIOUS'); ?>
@@ -100,11 +102,11 @@
             $('.wp-post-image,.arrow').click(function() {
                 if(current_position == MousePosition.RIGHT) {
                     <?php if($has_next): ?>
-                        document.location.href = '<?php next_posts() ?>?i=n';
+                        document.location.href = '<?php next_posts() ?>';
                		<?php endif; ?>
                 } else if(current_position == MousePosition.LEFT) {
                     <?php if($has_prev): ?>
-                        document.location.href = '<?php previous_posts() ?>?i=p';
+                        document.location.href = '<?php previous_posts() ?>';
                 	<?php endif; ?>
                 }
             });
