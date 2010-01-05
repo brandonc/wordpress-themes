@@ -28,10 +28,6 @@
 				<?php previous_posts_link('PREVIOUS<br/>'); ?>
 				<?php next_posts_link('NEXT'); ?>
             </div>
-			<? else: ?>
-			<div class="number left">
-				Random Photo
-			</div>
 			<? endif; ?>
             <div class="caption right">
                 <?php the_title(); ?><br/>
