@@ -4,31 +4,42 @@
 
 <div class="column content">
 <?php
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	global $query_string;
-	query_posts($query_string.'&posts_per_page=1&paged='.$paged);
+	if(!is_front_page()) :
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		global $query_string;
+		query_posts($query_string.'&posts_per_page=1&paged='.$paged);
+	else :
+		query_posts(array('orderby' => 'rand', 'showposts' => 1));
+	endif;
 
 	if (have_posts()) : the_post();
 		$has_next = ($paged < $wp_query->max_num_pages);
 		$has_prev = ($paged > 1);
 ?>
 	<div class="photo">
-        <div style="margin-top: 0;">
+        <div style="margin-top: 0; float: left;">
 			<?php the_post_thumbnail('single-post-thumbnail'); ?>
 	        <img id="arrow-previous" class="arrow" src="<?php bloginfo('template_directory') ?>/img/left_arrow.png"/>
 	        <img id="arrow-next" class="arrow" src="<?php bloginfo('template_directory') ?>/img/right_arrow.png"/>
 	        <br clear="all"/>
+			<?php if(!is_front_page()): ?>
 			<div class="number left">
                 Image <?php echo $paged; ?> / <?php echo $wp_query->max_num_pages; ?><br/>
-				<?php previous_posts_link('PREVIOUS'); ?>
+				<?php previous_posts_link('PREVIOUS<br/>'); ?>
 				<?php next_posts_link('NEXT'); ?>
             </div>
+			<? else: ?>
+			<div class="number left">
+				Random Photo
+			</div>
+			<? endif; ?>
             <div class="caption right">
                 <?php the_title(); ?><br/>
                 <?php the_content(); ?>
             </div>
         </div>
 	</div>
+
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 	<script type="text/javascript">        
         $(window).load(function() {
@@ -68,12 +79,12 @@
                	$('.wp-post-image').css('cursor', 'default');
               	
                 if(pos == MousePosition.LEFT) {
-                    <?php if($has_prev): ?>
+                    <?php if(!is_front_page() && $has_prev): ?>
                     $('#arrow-previous').show();
                     $('.wp-post-image').css('cursor', 'pointer');
                 	<?php endif; ?>
                 } else if(pos == MousePosition.RIGHT) {
-                    <?php if($has_next): ?>
+                    <?php if(!is_front_page() && $has_next): ?>
                     $('#arrow-next').show();
                     $('.wp-post-image').css('cursor', 'pointer');
                 	<?php endif; ?>
@@ -101,11 +112,11 @@
 			
             $('.wp-post-image,.arrow').click(function() {
                 if(current_position == MousePosition.RIGHT) {
-                    <?php if($has_next): ?>
+                    <?php if(!is_front_page() && $has_next): ?>
                         document.location.href = '<?php next_posts() ?>';
                		<?php endif; ?>
                 } else if(current_position == MousePosition.LEFT) {
-                    <?php if($has_prev): ?>
+                    <?php if(!is_front_page() && $has_prev): ?>
                         document.location.href = '<?php previous_posts() ?>';
                 	<?php endif; ?>
                 }

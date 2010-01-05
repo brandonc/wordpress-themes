@@ -127,7 +127,7 @@ a:hover { color: #000; }
 
 .nav a:hover { color: #000 !important; }
 
-.nav a.current {
+.nav li.current-cat a {
     color: #000000;
 }
 
@@ -143,6 +143,10 @@ a:hover { color: #000; }
 
 .wp-post-image {
     cursor: pointer;
+}
+
+.photo {
+	float: left;
 }
 
 .photo div {
