@@ -5,6 +5,7 @@
 	<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 	<meta name="copyright" content="&copy; <?php echo Date("Y") ?> Grant Ellis" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 	<!--[if IE]>
         <style type="text/css">
 		.nav a:hover {

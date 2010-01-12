@@ -11,14 +11,18 @@
 						<div class="date"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link(); ?></div>
 					</div>
 
-					<?php if (!has_post_thumbnail()) : ?>
-						<div class="entry article">
-							<?php the_content('Continue &raquo;'); ?>
+					<?php if(has_tag('video')) : ?>
+						<div class="entry video">
+							<?php the_content(); ?>
 						</div>
-					<?php else: ?>
+					<?php elseif (has_post_thumbnail()) : ?>
 						<div class="entry image">
 							<?php the_post_thumbnail('single-post-thumbnail'); ?>
 							<div class="caption"><?php the_content(); ?></div>
+						</div>
+					<?php else: ?>
+						<div class="entry article">
+							<?php the_content(); ?>
 						</div>
 					<?php endif;
 
