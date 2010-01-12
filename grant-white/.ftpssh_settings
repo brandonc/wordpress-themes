@@ -1,6 +1,0 @@
-protocol = ftp
-user = grantell
-password = nuggielove
-host = grantellisphoto.x10hosting.com
-path = www/wp-content/themes/White Lightning
-cli_options =
