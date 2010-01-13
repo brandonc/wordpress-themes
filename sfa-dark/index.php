@@ -11,9 +11,10 @@
 		<?php else: ?>
 			<div class="post">
 				<h1>Either You Shouldn't Be Here,</h1>
-				<h2>Or the blog has been destroyed</h2>
+				<h2>Or the blog has been dismantled by Other Government Agencies.</h2>
 			</div>
 		<?php endif; ?>
+		<p>Test</p>
 		</div>
 		<div class="grid_6">
 			<?php bloginfo('description'); ?>
