@@ -6,7 +6,7 @@ Author: Brandon Croft
 */
 
 /* YUI Reset 3.0 */
-html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}a{outline:none;}
 
 html, body, #wrap { height: 100%; }  
 body > #wrap {height: auto; min-height: 100%;}  
@@ -190,5 +190,26 @@ a:hover { }
 .right, .alignright { float: right; }
 .clear { clear: both; }
 
-body { background: #1c2124 url(img/bg.jpg) no-repeat scroll top right; }
+body { font-family: Helvetica,Arial,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",sans-serif; font-size: 14px; }
 
+h1 { font-size: 30px; color: #4e8264; margin: 12px 0 18px 0; }
+h2 { font-size: 22px; color: #4e8264; margin: 12px 0 12px 0; }
+h3 { line-height: 39px; font-size: 18px; color: #595f5b; }
+
+#wrap { background: #1c2124 url(img/bg.jpg) no-repeat scroll top right; margin-bottom: 50px; }
+#nav em { font-style: italic; color: #4e8264; text-decoration: none; font-size: 12px; }
+#nav a { display: block; }
+#nav a strong { font-size: 22px; }
+#nav a { text-decoration: none; color: #000; }
+#nav a:hover em { color: #68a180; }
+
+#header { padding-top: 50px; }
+
+#tagline { margin-top: 28px; margin-bottom: 31px; height: 71px; line-height: 71px; text-shadow: #000000 1px 1px; background-color: #161a1c; text-align: center; font-size: 27px; color: #4e8264; font-family: Georgia,"Lucida Bright","DejaVu Serif","Bitstream Vera Serif","Liberation Serif", serif; }
+#tagline a { text-decoration: none; color: #9BD6A3; }
+#tagline a:hover { color: #fff; }
+
+.summary .wp-post-image { border: 10px solid #4e8264; }
+.summary p { color: #4e8264; }
+
+#footer { background-color: #161a1c; border-top: 1px solid #2e3335; }
