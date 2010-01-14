@@ -4,7 +4,6 @@
 		<div id="tagline" class="grid_16">
 			<?php bloginfo('description'); ?> <a href="/about">More</a> &raquo;
 		</div>
-		<div>
 		<?php if (have_posts()) : the_post(); ?>
 			<div class="summary grid_10" id="post-<?php the_ID(); ?>">
 				<?php the_post_thumbnail('single-post-thumbnail'); ?>
@@ -22,10 +21,6 @@
 			<h1>Either You Shouldn't Be Here,</h1>
 			<h2>Or the blog has been dismantled by Other Government Agencies.</h2>
 		<?php endif; ?>
-		</div>
-		<div class="grid_6">
-			
-		</div>
 	</div>
 </div>
 <?php get_footer(); ?>

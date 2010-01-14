@@ -2,12 +2,19 @@
 	<div class="container_16">
 		<div class="grid_4">
 			<h3>Declassified</h3>
+			<hr/>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
 		</div>
 		<div class="grid_6">
 			<h3>SIGINT</h3>
+			<hr/>
 		</div>
 		<div class="grid_6">
 			<h3>Surveillance</h3>
+			<hr/>
+		</div>
+		<div class="clear grid_16 quiet" id="copyright">
+			Copyright &copy;<?php echo date('Y') ?> S.F.A.
 		</div>
 	</div>
 </div>
