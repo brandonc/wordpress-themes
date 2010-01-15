@@ -5,12 +5,14 @@
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<title><?php wp_title('&ndash;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/cufon-yui.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/Rockwell_Std_400.font.js"></script>
 	<script type="text/javascript">
-		Cufon.replace('h1', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #9bd6a3' });
+		Cufon.replace('.summary h1, .pagecontent h1', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #9bd6a3' });
+		Cufon.replace('.content h1', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #4e8264' });
 		Cufon.replace('h2', { fontFamily: 'Rockwell Std' });
 		Cufon.replace('h3', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #000000' });
 		Cufon.replace('#nav strong', { fontFamily: 'Rockwell Std', hover: true});
@@ -18,8 +20,8 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="wrap">
-	<div id="page" class="container_16 clearfix">
-		<div id="header">
+	<div id="page" class="clearfix">
+		<div id="header" class="container_16">
 			<div id="logo" class="grid_7"><a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="Secret Foreign Action"/></a></div>
 			<div class="grid_9">
 				<ul id="nav">
