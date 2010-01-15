@@ -255,7 +255,18 @@ ol.portraits { margin: 0; float: left; }
 	ol.portraits label { display: block; float: left; width: 160px; padding-right: 10px; }
 	ol.portraits img { padding-left: 10px; padding-right: 25px; width: 120px; }
 
-.timeline-ticks { margin-top: 1px; float: left; height: 511px; background: transparent url(img/timeline-tick.png) repeat-y scroll 0 0; width: 11px; }
+.timeline-ticks { margin-top: 1px; float: left; height: 511px; background: transparent url(img/timeline-tick.png) repeat-y scroll 0 0; width: 11px; position: absolute; left: 330px; }
+.pushpin { z-index: 10; display: block; width: 16px; height: 16px; left: 10px; background: transparent url(img/pushpin.png) no-repeat scroll 50% 50%; position: absolute; margin-top: -11px; }
+	.pushpin .title, .pushpin .description { text-indent: -1000em; display: block; width: 0px; height: 0px; }
+	.year { z-index: 1; position: absolute; color: #4e8264; left: 12px; margin-top: -6px; font-size: 12px; }
+
+.callout { z-index: 100; position: absolute; top: -45px; display: none; background: transparent url(img/callout.png) no-repeat scroll 0 0; width: 256px; height: 103px; padding: 20px 0 15px 35px; }
+	.callout h4, .callout em, .callout p, .callout a {
+		color: #9BD6A3; text-shadow: #161a1c 1px 1px; font-size: 12px; vertical-align: baseline; line-height: 20px; margin: 0; padding: 0;
+	}
+	.callout h4 { font-size: 16px; }
+	.callout em { }
+	.callout p { color: #4E8264; padding-right: 60px; }
 
 #footer { background-color: #161a1c; font-size: 12px; line-height: 18px; border-top: 1px solid #2e3335; }
 

@@ -15,7 +15,25 @@
 					<li class="years_4"><label class="lighter">Gerald R. Ford</label><img src="<?php bloginfo('template_url') ?>/img/president-ford.jpg" alt="Gerald R. Ford (1974-1977)"/></li>
 				</ol>
 				<div class="timeline-ticks">
-					<p>&nbsp;</p>
+					<?php
+						$startyear = 1945;
+						$lastyear = 1977;
+						$posts = get_posts(array('numberposts'=>-1));
+						foreach($posts as $post) {
+							$year = get_post_meta($post->ID, 'timeline_year', true);
+							if($year) {
+								$top = (($year-$startyear)*15);
+								echo '<a href="';
+								the_permalink();
+								echo '"><span class="pushpin" style="top: '.$top.'px;"><p class="title">'.$post->post_title.'</p><p class="description">'.$post->post_excerpt.'</p></a>';
+							}
+						}
+						
+						for($y = $startyear; $y <= $lastyear; $y += 10) {
+							$top = (($y-$startyear)*15);
+							echo '<span class="year" style="top: '.$top.'px;">'.$y.'</span>';
+						}
+					?>
 				</div>
 			</div>
 		</div>
