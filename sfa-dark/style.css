@@ -6,7 +6,7 @@ Author: Brandon Croft
 */
 
 /* YUI Reset 3.0 */
-html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}a,input{outline:none;}
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{font-size:100%;}legend{color:#000;}a,input{outline:none;}
 
 html, body, #wrap { height: 100%; } 
 body > #wrap {height: auto; min-height: 100%;}  
@@ -246,19 +246,38 @@ hr { background: transparent url(img/hr.png) repeat-x scroll top left; border: n
 
 .timeline { margin-top: 30px; }
 
-ol.portraits { margin: 0; float: left; }
-	ol.portraits li { list-style-type: none; margin: 1px 0 0 0; }
-	ol.portraits li.years_8 { height: 119px; }
-	ol.portraits li.years_2 { height: 29px; }
-	ol.portraits li.years_4 { height: 59px; }
-	ol.portraits li.years_6 { height: 89px; }
+ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 195px; }
+	ol.portraits li { list-style-type: none; margin: 0 0 0 1px; float: left; display: block; }
+	ol.portraits li.years_2 { width: 27px; }
+	ol.portraits li.years_3 { width: 41px; }
+	ol.portraits li.years_4 { width: 55px; }
+	ol.portraits li.years_5 { width: 69px; }
+	ol.portraits li.years_6 { width: 83px; }
+	ol.portraits li.years_8 { width: 111px; }
 	ol.portraits label { display: block; float: left; width: 160px; padding-right: 10px; }
 	ol.portraits img { padding-left: 10px; padding-right: 25px; width: 120px; }
 
-.timeline-ticks { margin-top: 1px; float: left; height: 511px; background: transparent url(img/timeline-tick.png) repeat-y scroll 0 0; width: 11px; position: absolute; left: 330px; }
-.pushpin { z-index: 10; display: block; width: 16px; height: 16px; left: 10px; background: transparent url(img/pushpin.png) no-repeat scroll 50% 50%; position: absolute; margin-top: -11px; }
-	.pushpin .title, .pushpin .description { text-indent: -1000em; display: block; width: 0px; height: 0px; }
-	.year { z-index: 1; position: absolute; color: #4e8264; left: 12px; margin-top: -6px; font-size: 12px; }
+	.president { height: 112px; }
+	.president label { display: block; text-align: center; width: 100px; margin-top: 135px; color: #4E8264; font-size: 12px; opacity: 0; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); }
+		.truman { background: url(img/presidents/truman.jpg) no-repeat scroll 0 0; }
+		.eisenhower { background: url(img/presidents/eisenhower.jpg) no-repeat scroll 0 0; }
+		.kennedy { background: url(img/presidents/kennedy.jpg) no-repeat scroll 0 0; }
+		.johnson { background: url(img/presidents/johnson.jpg) no-repeat scroll 0 0; }
+		.nixon { background: url(img/presidents/nixon.jpg) no-repeat scroll 0 0; }
+		.ford { background: url(img/presidents/ford.jpg) no-repeat scroll 0 0; }
+		.carter { background: url(img/presidents/carter.jpg) no-repeat scroll 0 0; }
+		.reagan { background: url(img/presidents/reagan.jpg) no-repeat scroll 0 0; }
+		.bush41 { background: url(img/presidents/bush41.jpg) no-repeat scroll 0 0; }
+		.clinton { background: url(img/presidents/clinton.jpg) no-repeat scroll 0 0; }
+		.bush43 { background: url(img/presidents/bush43.jpg) no-repeat scroll 0 0; }
+		.obama { background: url(img/presidents/obama.jpg) no-repeat scroll 0 0; }
+
+		.saturate { background-position: 0 -112px; opacity: 0; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); }
+
+.timeline-ticks { margin-top: 140px; width: 100%; float: left; background: transparent url(img/timeline-tick.png) repeat-x scroll 0 0; height: 9px; position: absolute; }
+.pushpin { z-index: 10; display: block; width: 16px; height: 15px; background: transparent url(img/pushpin.png) no-repeat scroll 0 0; position: absolute; margin-top: -14px; }
+	.pushpin .title, .pushpin .description, .pushpin .info, .pushpin .year { text-indent: -1000em; display: block; width: 0px; height: 0px; }
+	.year { z-index: 1; position: absolute; color: #4e8264; top: 20px; font-size: 12px; margin-left: -14px; }
 
 .callout { z-index: 100; position: absolute; top: -45px; display: none; background: transparent url(img/callout.png) no-repeat scroll 0 0; width: 256px; height: 103px; padding: 20px 0 15px 35px; }
 	.callout h4, .callout em, .callout p, .callout a {
@@ -267,6 +286,8 @@ ol.portraits { margin: 0; float: left; }
 	.callout h4 { font-size: 16px; }
 	.callout em { }
 	.callout p { color: #4E8264; padding-right: 60px; }
+
+.callout-vertical { background-image: url(img/callout-v.png); width: 296px; height: 93px; left: -143px; padding: 10px 5px 0 15px; }
 
 #footer { background-color: #161a1c; font-size: 12px; line-height: 18px; border-top: 1px solid #2e3335; }
 
