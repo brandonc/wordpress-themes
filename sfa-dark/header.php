@@ -15,6 +15,7 @@
 		Cufon.replace('.content h1', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #4e8264' });
 		Cufon.replace('h2', { fontFamily: 'Rockwell Std' });
 		Cufon.replace('h3', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #000000' });
+		Cufon.replace('h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
 		Cufon.replace('#nav strong', { fontFamily: 'Rockwell Std', hover: true});
 	</script>
 </head>
@@ -38,5 +39,4 @@
 					?>
 				</ul>
 			</div>
-		</div>
-		
+		</div>		

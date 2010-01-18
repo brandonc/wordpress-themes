@@ -2,9 +2,11 @@
 		get_header(); ?>
 		
 		<div class="container_16">
+			<?php if (is_home()): ?>
 			<div id="tagline" class="grid_16">
 				<?php bloginfo('description'); ?> <a href="/about">More</a> &raquo;
 			</div>
+			<?php endif; ?>
 			<?php if (have_posts()) : the_post(); ?>
 				<div class="summary grid_10" id="post-<?php the_ID(); ?>">
 					<?php the_post_thumbnail('single-post-thumbnail'); ?>
@@ -19,7 +21,7 @@
 					</div>
 				<?php endif; ?>
 			<?php else: ?>
-			<div class="grid_16">
+			<div class="grid_16 pagecontent">
 				<h1>Either You Shouldn't Be Here,</h1>
 				<h2>Or the blog has been dismantled by Other Government Agencies.</h2>
 			</div>

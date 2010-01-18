@@ -9,7 +9,7 @@
 					<?php
 						$startyear = 1945;
 						$lastyear = 2012;
-						$posts = get_posts(array('numberposts'=>-1));
+						$posts = get_posts(array('numberposts'=>-1, 'orderby'=>'meta_value', 'order'=>'ASC', 'meta_key'=>'timeline_year'));
 						foreach($posts as $post) {
 							$year = get_post_meta($post->ID, 'timeline_year', true);
 							if($year) {
@@ -25,6 +25,11 @@
 							echo '<span class="year" style="left: '.$left.'px;">'.$y.'</span>';
 						}
 					?>
+					<div class="callout callout-vertical" style="top: -101px;">
+						<h4></h4>
+						<em></em><p>
+						<a href="#"> Read More...</a></p>
+					</div>
 				</div>
 
 				<ol class="portraits">
