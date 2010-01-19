@@ -189,7 +189,7 @@ a:visited { xcolor: #4E8264; }
 .right, .alignright { float: right; }
 .clear { clear: both; }
 
-body { font-family: Helvetica,Arial,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",sans-serif; font-size: 14px; }
+body { font-family: Helvetica,Arial,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",sans-serif; font-size: 14px; background-color: #000; }
 
 h1 { font-size: 30px; color: #4e8264; margin: 12px 0 18px 0; }
 h2 { font-size: 22px; color: #4e8264; margin: 12px 0 12px 0; }
@@ -246,10 +246,8 @@ hr { background: transparent url(img/hr.png) repeat-x scroll top left; border: n
 
 .timeline { margin-top: 30px; }
 
-.modal-container { top: 150px; position: absolute; }
-.modal { background-color: #161a1c; -moz-border-radius: 8px; -webkit-border-radius: 8px; position: absolute; }
-	.mapcontainer { height: 492px; }
-	.map { width: 940px; background: transparent url(img/map.png) no-repeat scroll 0 0; height: 492px; }
+.map-container { background-color: #353535; -moz-border-radius: 8px; -webkit-border-radius: 8px; }
+.map { width: 940px; background: transparent url(img/map.png) no-repeat scroll 0 0; height: 492px; }	
 	.modal-close { display: block; width: 31px; height: 30px; background: transparent url(img/modal-close.png) no-repeat scroll 0 0; right: 0; top: 0; position: absolute;  }
 	.modal-close:hover { background-position: 0 -30px; }
 
@@ -285,13 +283,15 @@ ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 185px; }
 	.pushpin .title, .pushpin .description, .pushpin .info, .pushpin .year { text-indent: -1000em; display: block; width: 0px; height: 0px; }
 	.year { z-index: 1; position: absolute; color: #4e8264; top: 20px; font-size: 12px; margin-left: -14px; }
 
-.callout { z-index: 10; position: absolute; top: -45px; background: transparent url(img/callout.png) no-repeat scroll 0 0; width: 337px; height: 93px; padding: 20px 0 15px 35px; }
+.callout { z-index: 10; position: absolute; top: -45px; background: transparent url(img/callout.png) no-repeat scroll 0 0; width: 344px; height: 62px; padding: 14px 0 15px 30px; }
 	.callout h4, .callout em, .callout p, .callout a {
 		color: #9BD6A3; text-shadow: #161a1c 1px 1px; font-size: 12px; vertical-align: baseline; line-height: 20px; margin: 0; padding: 0;
 	}
 	.callout h4 { font-size: 16px; }
 	.callout em { }
 	.callout p { color: #4E8264; padding-right: 60px; }
+
+.callout-right { background-position: 0 -92px; }
 
 .callout-vertical { background-image: url(img/callout-v.png); left: -143px; padding: 10px 5px 0 15px; height: 80px; }
 .callout-vertical-left { background-position: 0 -93px; left: 0; }
@@ -329,3 +329,29 @@ ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 185px; }
 
 .tweet .aktt_tweet_time { color: #161a1c; font-size: 11px; text-shadow: none; }
 .tweet .aktt_tweet_time:hover { color: #2f3234; }
+
+
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:hidden;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    Example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay{background:url(img/overlay.png) 0 0 repeat; }
+#cboxLoadingOverlay{background:url(img/loading_background.png) center center no-repeat;}
+        #cboxLoadingGraphic{background:url(img/loading.gif) center center no-repeat;}
+#cboxClose { display: none !important; }

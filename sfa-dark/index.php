@@ -1,7 +1,7 @@
 <?php
 		get_header(); ?>
 		
-		<div class="container_16">
+		<div id="main" class="container_16">
 			<?php if (is_home()): ?>
 			<div id="tagline" class="grid_16">
 				<?php bloginfo('description'); ?> <a href="/about">More</a> &raquo;

@@ -15,13 +15,15 @@ $('#s').blur(function() {
 });
 
 $('.modal-close').live('click', function() {
-	$(this).parent('.modal').hide(500);
+	$.fn.colorbox.close();
 	return false;
 });
 
 $('a[href$="map/"]').click(function() {
-	$.get($(this).attr('href'), function(data) {
-		$('#page').append($(data));
+	$.fn.colorbox({ href: '/map', opacity: 0.7,
+		onComplete: function() {
+			$('.map-container .pushpin').hoverIntent(pushpinhoverconfig_create);
+		}
 	});
 	return false;
 });
@@ -79,27 +81,27 @@ var lastpresident = '';
 function pushpin_over_action(el) {
 	if(el.size() == 0)
 		return;
-		
+	
 	var position = parseInt(el.css('left'));
 	var callout = $('.callout');
-	var offset = parseInt($('.callout').width() / 2) - 2;
+	var offset = parseInt($('.callout').width() / 2) - 6;
 	
 	if(position < offset) {
 		offset = 0;
 		callout.addClass('callout-vertical-left');
 		callout.removeClass('callout-vertical-right');
 	} else if(position > 940 - offset) {
-		offset = callout.width() - 7;
+		offset = callout.width() - 15;
 		callout.addClass('callout-vertical-right');
 		callout.removeClass('callout-vertical-left');
 	} else {
 		callout.removeClass('callout-vertical-right');
 		callout.removeClass('callout-vertical-left');
 	}
-	
+
 	callout.animate({
 		left: position - offset
-	}, 300, 'easeInQuad');
+	}, 300, 'easeInQuad', function() { callout.show(100); });
 			
 	callout.find('h4').html(el.find('.title').text());
 	fx_replace_html(callout.find('em'), el.find('.info').text());
@@ -144,58 +146,53 @@ var pushpinhoverconfig_move = {
 	}
 };
 
-/*
 var pushpinhoverconfig_create = {    
     sensitivity: 3,
     interval: 50,
     timeout: 200,
 	over: function() {
-		var callout = $('<div class="callout callout-vertical"><h4>' +
+		var callout = $('<div class="callout"><h4>' +
 							$(this).find('.title').text() +
 						'</h4><em>' + $(this).find('.info').text() +
 						'</em><p>' + $(this).find('.description').text() +
 						'<a href="' + $(this).find('a').attr('href') + '"> Read More...</a></p></div>');
 
-		callout.css('left', $(this).css('left') - 150);
-		callout.css('top', '-120px');
+		var pinleft = parseInt($(this).css('left'));
+		var pintop = parseInt($(this).css('top'));
+		var leftanim = 10;
+		if(pinleft > 460) {
+			callout.addClass('callout-right');
+			callout.css('left', -410);
+			leftanim = -350
+		} else {
+			callout.css('left', 80);
+		}
+
+		callout.css('top', -37);
 		callout.css('display', 'block');
+		callout.css('position', 'relative');
 		callout.css('opacity', '0');
+
 		$(this).append(callout);
 		Cufon.replace('.callout h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
 		Cufon.now();
 		callout.animate({
-			top: '-90px',
+			left: leftanim,
 			opacity: 1.0
 		}, 200);
-		
-		var president = get_president_by_year(parseInt($(this).find('.year').text()));
-		var saturate = $('<div class="president ' + president + ' saturate"></div>');
-		var label = $('.' + president + ' label');
-		$('.' + president).append(saturate);
-		
-		label.animate({
-			opacity: 1.0
-		}, 500);
-
-		saturate.animate({
-			opacity: 1.0
-		}, 500);
 	},
 	out: function() {
-		$(this).find('.callout').animate({
-			top: '-120px',
+		var callout = $(this).find('.callout');
+		var leftanim = 80;
+		if(parseInt(callout.css('left')) < 0)
+			leftanim = -410;
+
+		callout.animate({
+			left: leftanim,
 			opacity: 0.0
 		}, 200, function() { $(this).remove(); });
-
-		var president = get_president_by_year(parseInt($(this).find('.year').text()));
-		$('.' + president + ' > .saturate').animate({
-			opacity: 0.0
-		}, 500, function() { $(this).remove(); });
-		var label = $('.' + president + ' label');
-		label.fadeOut(500);
 	}
 };
-*/
 
 $('.pushpin').hoverIntent(pushpinhoverconfig_move);
 pushpin_over_action($('.pushpin:first'));

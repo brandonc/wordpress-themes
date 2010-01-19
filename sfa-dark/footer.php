@@ -41,6 +41,7 @@
 <?php else: ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/jquery.hoverIntent.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/app.js"></script>
 <?php endif; ?>
 </body>

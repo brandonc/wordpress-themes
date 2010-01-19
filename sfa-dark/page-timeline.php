@@ -1,7 +1,7 @@
 <?php
 		get_header(); ?>
 		
-		<div class="pagecontent container_16">
+		<div id="main" class="pagecontent container_16">
 			<div class="grid_16">
 				<h1>Executive Timeline</h1>
 				
@@ -16,7 +16,7 @@
 								$left = (($year-$startyear)*14);
 								echo '<a href="';
 								the_permalink();
-								echo '"><span class="pushpin" style="left: '.$left.'px;"><p class="title">'.$post->post_title.'</p><p class="description">'.$post->post_excerpt.'</p><p class="year">'.$year.'</p></a>';
+								echo '"><span class="pushpin" style="left: '.$left.'px;"><p class="title">'.$post->post_title.'</p><p class="description">'.$post->post_excerpt.'</p><p class="year">'.$year.'</p></span></a>';
 							}
 						}
 						
@@ -25,7 +25,7 @@
 							echo '<span class="year" style="left: '.$left.'px;">'.$y.'</span>';
 						}
 					?>
-					<div class="callout callout-vertical" style="top: -101px;">
+					<div class="callout callout-vertical" style="display: none; top: -101px;">
 						<h4></h4>
 						<em></em><p>
 						<a href="#"> Read More...</a></p>

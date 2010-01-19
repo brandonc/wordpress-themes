@@ -1,7 +1,7 @@
 <?php
 		get_header(); ?>
 		
-		<div class="pagecontent container_16">
+		<div id="main" class="pagecontent container_16">
 			<div class="grid_10">
 				<?php if (have_posts()) : the_post(); ?>
 					<h1><?php the_title(); ?></h1>
