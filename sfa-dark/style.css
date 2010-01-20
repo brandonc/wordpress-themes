@@ -8,8 +8,8 @@ Author: Brandon Croft
 /* YUI Reset 3.0 */
 html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{font-size:100%;}legend{color:#000;}a,input{outline:none;}
 
-html, body, #wrap { height: 100%; } 
-body > #wrap {height: auto; min-height: 100%;}  
+html, body, .ie, #wrap { height: 100%; } 
+body > #wrap {height: auto; min-height: 100%;}
 #page { padding-bottom: 218px; }  /* must be same height as the footer */  
   
 #footer { position: relative; margin-top: -219px; height: 218px; clear:both; }
@@ -229,6 +229,12 @@ hr { background: transparent url(img/hr.png) repeat-x scroll top left; border: n
 	line-height: 24px;
 }
 
+.iewarning { display: none; margin-top: 25px; margin-bottom: 25px; background: #d72822; padding: 10px; color: #fff; }
+.iewarning h1 { color: #fff; }
+.iewarning a { color: #000; }
+.iewarning a:hover { color: #fff; }
+.ie .iewarning { display: block; }
+
 .lighter { color: #afafaf; }
 
 .content h1, .pagecontent h1 { margin: 0; }
@@ -277,6 +283,7 @@ ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 185px; }
 		.obama { background: url(img/presidents/obama.jpg) no-repeat scroll 0 0; }
 
 		.saturate { background-position: 0 -112px; opacity: 0; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); }
+		.ie .saturate { display: none !important; }
 
 .timeline-ticks { margin-top: 130px; width: 100%; float: left; background: transparent url(img/timeline-tick.png) repeat-x scroll 0 0; height: 9px; position: absolute; }
 .pushpin { z-index: 100; display: block; width: 16px; height: 15px; background: transparent url(img/pushpin.png) no-repeat scroll 0 0; position: absolute; margin-top: -14px; }

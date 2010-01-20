@@ -50,6 +50,7 @@
 		</div>
 		<p class="clear">&nbsp;</p>
 		<p class="clear">&nbsp;</p>
+	<!--[if IE]></div><![endif]-->
 	</div><?php // page ?>
 </div><?php // wrap ?>
 <?php get_footer(); ?>

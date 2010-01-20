@@ -14,15 +14,16 @@
 	<script type="text/javascript">
 		Cufon.replace('.summary h1, .pagecontent h1', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #9bd6a3' });
 		Cufon.replace('.content h1', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #4e8264' });
-		Cufon.replace('h2', { fontFamily: 'Rockwell Std' });
+		Cufon.replace('h2,#nav strong', { fontFamily: 'Rockwell Std' });
 		Cufon.replace('h3', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #000000' });
-		Cufon.replace('h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
-		Cufon.replace('#nav strong', { fontFamily: 'Rockwell Std', hover: true});
 	</script>
 </head>
 <body <?php body_class(); ?>>
 <div id="wrap">
 	<div id="page" class="clearfix">
+		<!--[if lte IE 6]><div id="#ie6" class="ie"><![endif]-->
+		<!--[if IE 7]><div id="#ie7" class="ie"><![endif]-->
+		<!--[if IE 8]><div id="#ie8" class="ie"><![endif]-->
 		<div id="header" class="container_16">
 			<div id="logo" class="grid_7"><a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="Secret Foreign Action"/></a></div>
 			<div class="grid_9">
@@ -39,5 +40,10 @@
 					  endforeach;
 					?>
 				</ul>
+			</div>
+
+			<div class="grid_16 iewarning">
+				<h1>Technical Warning</h1>
+				<p>There are two very compelling reasons to switch browsers. First, other browsers support rendering improvements such as 2D graphics, rounded corners, and drop shadows. Second, you will enjoy at least double the javascript performance, especially on this website. We recommend downloading Google's <a href="http://www.google.com/chrome">Chrome browser</a> or <a href="http://www.getfirefox.com">Mozilla Firefox</a>.</p>
 			</div>
 		</div>		

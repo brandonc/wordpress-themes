@@ -16,6 +16,7 @@
 			<p class="clear">&nbsp;</p>
 			<p class="clear">&nbsp;</p>
 		</div>
+	<!--[if IE]></div><![endif]-->
 	</div><?php // page ?>
 </div><?php // wrap ?>
 <?php get_footer(); ?>

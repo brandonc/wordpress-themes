@@ -1,8 +1,10 @@
-$('#nav a').hover(function() {
-	Cufon.replace($(this).find('strong').get(), { color: '#4e8264', textShadow: '1px 1px #0d0e0e' });
-}, function() {
-	Cufon.replace($(this).find('strong').get(), { color: '#000000', textShadow: 'none' });
-});
+if(!$.browser.msie) {
+	$('#nav a').hover(function() {
+		Cufon.replace($(this).find('strong').get(), { color: '#4e8264', textShadow: '1px 1px #0d0e0e' });
+	}, function() {
+		Cufon.replace($(this).find('strong').get(), { color: '#000000', textShadow: 'none' });
+	});
+}
 
 $('#s').focus(function() {
 	$('#searchform label').hide(0);
@@ -20,7 +22,7 @@ $('.modal-close').live('click', function() {
 });
 
 $('a[href$="map/"]').click(function() {
-	$.fn.colorbox({ href: '/map', opacity: 0.7,
+	$.fn.colorbox({ href: '/map/', opacity: 0.7,
 		onComplete: function() {
 			$('.map-container .pushpin').hoverIntent(pushpinhoverconfig_create);
 		}
@@ -107,9 +109,11 @@ function pushpin_over_action(el) {
 	fx_replace_html(callout.find('em'), el.find('.info').text());
 	fx_replace_html(callout.find('p'), el.find('.description').text() + '<a href="' + el.parent('a').attr('href') + '"> Read More...</a>');
 	
-	Cufon.replace('.callout h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
-	Cufon.now();
-	
+	if(!$.browser.msie) {
+		Cufon.replace('.callout h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
+		Cufon.now();
+	}
+
 	var president = get_president_by_year(parseInt(el.find('.year').text()));
 	var saturate = $('<div class="president ' + president + ' saturate"></div>');
 	var label = $('.' + president + ' label');
@@ -174,8 +178,12 @@ var pushpinhoverconfig_create = {
 		callout.css('opacity', '0');
 
 		$(this).append(callout);
-		Cufon.replace('.callout h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
-		Cufon.now();
+
+		if(!$.browser.msie) {
+			Cufon.replace('.callout h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
+			Cufon.now();
+		}
+
 		callout.animate({
 			left: leftanim,
 			opacity: 1.0
@@ -193,6 +201,9 @@ var pushpinhoverconfig_create = {
 		}, 200, function() { $(this).remove(); });
 	}
 };
+
+if(!$.browser.msie)
+	Cufon.replace('h4', { fontFamily: 'Rockwell Std', textShadow: '1px 1px #161a1c' });
 
 $('.pushpin').hoverIntent(pushpinhoverconfig_move);
 pushpin_over_action($('.pushpin:first'));
