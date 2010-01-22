@@ -375,7 +375,7 @@ ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 185px; }
 .comments a { color: #595f5b !important; }
 .comments a:hover { color: #d72822 !important; text-decoration: none !important; }
 #dsq-content { margin-top: 25px; line-height: 20px !important; }
-.dsq-options, .dsq-comment-header, .dsq-pagination { background: none !important; }
+.dsq-options, .dsq-comment-header, .dsq-pagination, .dsq-subscribe-menu { background: none !important; }
 .dsq-dc-logo, #dsq-content h3 { display: none !important; }
 #dsq-new-post { width: 354px; float: right !important; margin-left: 20px; clear: right; top: -45px; position: relative; }
 #dsq-comments { display: inline !important; float: left !important; margin-right: 0; width: 566px !important; }
