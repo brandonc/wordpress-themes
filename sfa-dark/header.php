@@ -43,7 +43,15 @@
 			</div>
 
 			<div class="grid_16 iewarning">
-				<h1>Technical Warning</h1>
-				<p>There are two very compelling reasons to switch browsers. First, other browsers support rendering improvements such as 2D graphics, rounded corners, and drop shadows. Second, you will enjoy at least double the javascript performance, especially on this website. We recommend downloading Google's <a href="http://www.google.com/chrome">Chrome browser</a> or <a href="http://www.getfirefox.com">Mozilla Firefox</a>.</p>
+				<div class="iecontent">
+					<h1>Internet Explorer Warning</h1>
+					<p>This website, and many others, use features which your browser does not support.</p>
+					<p>There are two very compelling reasons to switch browsers:</p>
+					<ol>
+						<li>Rendering improvements, such as 2D graphics, rounded corners, and drop shadows.</li>
+						<li>Javascript performance: Animation and other effects will be at least twice as fast and help reserve your computer for other tasks.</li>
+					</ol>
+					<p>We recommend downloading Google's <a href="http://www.google.com/chrome">Chrome browser</a> or <a href="http://www.mozilla.com/en-US/firefox/ie.html">Mozilla Firefox</a>.</p>
+				</div>
 			</div>
 		</div>		
