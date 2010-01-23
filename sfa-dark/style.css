@@ -254,9 +254,16 @@ hr { background: transparent url(img/hr.png) repeat-x scroll top left; border: n
 .content ul li, .pagecontent ul li { list-style-type: disc; margin-left: 10px; }
 .content ol li, .pagecontent ol li { list-style-type: upper-roman; margin-left: 10px; }
 
+.content hr { display: block; width: 580px; height: 50px; background: transparent url(img/ornament-knives.png) no-repeat scroll 0 0; }
+
 .content h1 { color: #1c2124; }
 .content p.clear, .pagecontent p.clear { margin: 0; }
 .content .discuss { font-size: 18px; line-height: 24px; }
+
+.content blockquote { display: block; border-top: solid 2px #AFAFAF; border-bottom: solid 2px #AFAFAF; margin: 0 20px 0 50px; font-size: 18px; }
+.content blockquote p { margin: 15px 0; font-family: Georgia,"Lucida Bright","DejaVu Serif","Bitstream Vera Serif","Liberation Serif", serif; color: #4E8264; }
+
+.dquo { margin-left: -0.4em; }
 
 .timeline { margin-top: 30px; }
 
@@ -264,6 +271,8 @@ hr { background: transparent url(img/hr.png) repeat-x scroll top left; border: n
 .map { width: 940px; background: transparent url(img/map.png) no-repeat scroll 0 0; height: 492px; }	
 	.modal-close { display: block; width: 31px; height: 30px; background: transparent url(img/modal-close.png) no-repeat scroll 0 0; right: 0; top: 0; position: absolute;  }
 	.modal-close:hover { background-position: 0 -30px; }
+
+.minimap { float: right; width: 340px; height: 181px; float: right; background: transparent url(img/minimap.png) no-repeat scroll 0 0; }
 
 ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 185px; }
 	ol.portraits li { list-style-type: none; margin: 0 0 0 1px; float: left; display: block; }
@@ -385,10 +394,8 @@ ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 185px; }
 .dsq-comment-body { width: 396px; float: left !important; }
 .dsq-comment-message { margin: 0 !important; line-height: 20px !important; }
 .dsq-comment-footer { clear: both !important; }
-.dsq-comment-header-likes, .dsq-like, .dsq-pagination img { display: none !important; }
+.dsq-comment-header-likes, .dsq-like, .dsq-pagination img, .dsq-request-user-stats, .dsq-header-avatar, .dsq-post-report { display: none !important; }
 .dsq-comment-header-meta { padding: 0 !important; }
-.dsq-header-avatar { display: none; }
-.dsq-post-report { display: none !important; }
 .dsq-comment-header-time a:hover { border-bottom: none !important; }
 
 .dsq-comment-header td { vertical-align: top !important; }
@@ -398,3 +405,5 @@ ol.portraits { margin: 0; width: 100%; height: 200px; margin-top: 185px; }
 .dsq-pagination { float: left !important; margin: 0 0 0 8px !important; text-align: left !important; top: -56px; position: relative; }
 .dsq-pagination:before { content: 'Page: '; }
 .dsq-brlink { clear: both; display: block; float: left; }
+.dsq-thread-settings { clear: none !important; float: left !important; margin-left: 19px !important; position: relative; top: -45px; }
+#dsq-content .dsq-request-user-name small { display: block; }

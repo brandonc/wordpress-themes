@@ -9,8 +9,8 @@
 			<h3>SIGINT</h3>
 			<hr/>
 			<div class="network">
-				<p><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('template_url') ?>/img/rss.png" align="absmiddle" alt="Subscribe to RSS Feed"/>Subscribe to RSS Feed</a></p>
-				<p><a href="http://twitter.com/wordpollution"><img src="<?php bloginfo('template_url') ?>/img/twitter.png" align="absmiddle" alt="Follow @wordpollution on Twitter"/>Follow @wordpollution</a> on Twitter</p>
+				<p><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('template_url') ?>/img/rss.png" width="16" height="16" align="absmiddle" alt="Subscribe to RSS Feed"/>Subscribe to RSS Feed</a></p>
+				<p><a href="http://twitter.com/wordpollution"><img src="<?php bloginfo('template_url') ?>/img/twitter.png" width="16" height="16" align="absmiddle" alt="Follow @wordpollution on Twitter"/>Follow @wordpollution</a> on Twitter</p>
 			</div>
 
 			<form action="<?php bloginfo('home'); ?>" id="searchform" method="get">
@@ -33,16 +33,15 @@
 		</div>
 	</div>
 </div>
-<?php $debug = True; ?>
+</body>
 <script type="text/javascript">Cufon.now();</script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<?php if(!$debug): ?>
-<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/app-compiled.js"></script>
-<?php else: ?>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<?php if(defined('DEBUG')): ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/jquery.hoverIntent.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/app.js"></script>
+<?php else: ?>
+<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/app-compiled.js"></script>
 <?php endif; ?>
-</body>
 </html>

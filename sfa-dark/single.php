@@ -7,14 +7,21 @@
 					<?php if (have_posts()) : the_post(); ?>
 						<h1><?php the_title(); ?></h1>
 						<h2><?php the_excerpt(); ?></h2>
-						<p><?php the_content(); ?></p>
+						<?php the_content(); ?>
 					<?php endif; ?>
 				</div>
 				<div class="grid_6">
-				</div>
-				<p class="clear">&nbsp;</p>
-				<div class="discuss grid_16">
-					<a id="load-comments" href="<?php bloginfo('home'); ?>/comments/?id=<?php echo $post->ID ; ?>">Discuss</a>
+					<?php
+						$overlay = get_post_meta($post->ID, 'map_overlay', true);
+						if($overlay):
+							$ud = wp_upload_dir();
+?>
+							<div class="minimap">
+								<img width="340" height="181" src="<?php echo $ud['url']; ?>/overlay-<?php echo $overlay; ?>.png" alt="Mini-map"/>
+							</div>
+<?php
+						endif;
+					?>
 				</div>
 			</div>
 			
@@ -23,7 +30,11 @@
 		
 		<div class="comments">
 			<div class="container_16">		
-				<div class="grid_16"></div>
+				<div class="grid_16">
+					<?php comments_template( '/comments.php' ); ?>
+				</div>
+				<p class="clear">&nbsp;</p>
+				<p class="clear">&nbsp;</p>
 			</div>
 		</div>
 	<!--[if IE]></div><![endif]-->

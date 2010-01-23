@@ -6,13 +6,6 @@ if(!$.browser.msie) {
 	});
 }
 
-$('#load-comments').click(function() {
-	$('.comments .grid_16').load($(this).attr('href'), function() {
-		$('.comments').append($('<p class="clear">&nbsp;</p>'));
-	});
-	return false;
-});
-
 $('#s').focus(function() {
 	$('#searchform label').hide(0);
 });
