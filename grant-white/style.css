@@ -70,6 +70,7 @@ p { font-size: 1.2em; }
 .caption p { font-size: 1.0em; }
 a { color: #ccc; }
 a:hover { color: #000; }
+a.active-bookpreview { color: #000 !important; }
 
 .container {
     text-align: left;
