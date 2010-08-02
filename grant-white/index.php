@@ -53,15 +53,15 @@
 
             $.mouse_within = function(obj, e) {
                 var offset = obj.offset();
-                var width = obj.width();
-                var height = obj.height();
+                var widthObj = obj.width();
+                var heightObj = obj.height();
 
                 if(e.pageX >= offset.left && e.pageY >= offset.top
-                    && e.pageY < height && e.pageX < (width / 2 + offset.left))
+                    && e.pageY < heightObj && e.pageX < (widthObj / 2 + offset.left))
                 {
                     return MousePosition.LEFT;
                 } else if(e.pageX >= offset.left && e.pageY >= offset.top
-                    && e.pageY < (offset.top + height) && e.pageX > (width / 2) + offset.left && e.pageX < offset.left + width)
+                    && e.pageY < (offset.top + heightObj) && e.pageX > (widthObj / 2) + offset.left && e.pageX < offset.left + widthObj)
                 {
                     return MousePosition.RIGHT;
                 }
