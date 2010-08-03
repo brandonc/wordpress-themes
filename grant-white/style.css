@@ -75,6 +75,7 @@ a.active-bookpreview { color: #000 !important; }
 .container {
     text-align: left;
     clear: both;
+	width: 940px;
 }
 
 .right { text-align: right; float: right; }
@@ -174,6 +175,7 @@ a.active-bookpreview { color: #000 !important; }
 
 .photo .caption {
     float: right;
+	display: none;
 }
 
 .photo .number {

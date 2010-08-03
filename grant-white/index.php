@@ -29,7 +29,7 @@
 				<?php next_posts_link('NEXT'); ?>
             </div>
 			<? endif; ?>
-            <div class="caption right">
+            <div id="caption" class="caption right">
                 <?php the_title(); ?><br/>
                 <?php the_content(); ?>
             </div>
@@ -38,7 +38,7 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 	<script type="text/javascript">        
-        $(window).load(function() {
+        $(document).ready(function() {
             var photo = $('.wp-post-image');
             var offset = photo.offset();
             var width = photo.width();
@@ -96,13 +96,14 @@
                 $.photo_detect(MousePosition.RIGHT);
             }
 
+			var count = 0;
             $(document).mousemove(function(e) {
-				$.photo_detect($.mouse_within($('.wp-post-image'), e));
+				$.photo_detect($.mouse_within(photo, e));
 				
 				if(current_position == MousePosition.LEFT || current_position == MousePosition.RIGHT) {
-					$('.caption').show();
+					$('#caption:hidden').css('display', 'block');
 				} else {
-					$('.caption').hide();
+					$('#caption:visible').css('display', 'none');
 				}
             });
 			
