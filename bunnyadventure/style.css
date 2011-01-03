@@ -54,6 +54,7 @@ a:hover { color: #b8b8b8; }
 .post .article { padding: 10px; }
 .post p { margin: 10px 0; }
 .entry .caption { margin: 10px 10px 10px 10px; }
+.entry ol li { list-style-type: decimal; margin-left: 40px; }
 .post .meta { margin: 0 10px 0 10px; }
 .post .bordered { border: solid 3px #b8b8b8; }
 .date { float: right; padding: 3px 10px 3px 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; background: #F2972C; -moz-box-shadow: 1px 1px 0px #73603D; -webkit-box-shadow: 1px 1px 0px #73603D; font-size: 12pt; color: #FFFFFF; -moz-text-shadow: 1px 1px 0px #73603D; text-shadow: 1px 1px 0px #73603D; }
